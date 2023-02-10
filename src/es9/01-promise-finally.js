@@ -1,6 +1,6 @@
 const unaFuncion = () => {
     return new Promise((seResolvio, hayQueRechazar) => {
-        if (true) {
+        if (false) {
             seResolvio('Hey, si es verdadero')
         } else {
             hayQueRechazar('es falso, entonces pailas')
@@ -10,4 +10,5 @@ const unaFuncion = () => {
 
 unaFuncion()
     .then(unaRespuestaPositiva => console.log(unaRespuestaPositiva))
-    .catch(respuestaNegativa => console.log(respuestaNegativa));
+    .catch(respuestaNegativa => console.log(respuestaNegativa))
+    .finally(() => console.log('Finally'));
